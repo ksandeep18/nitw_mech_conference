@@ -151,7 +151,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    filter: brightness(0.4); /* makes it dark */
+    filter: brightness(2); /* makes it dark */
 }
 
 .hero .parallax-bg::after {
