@@ -9,81 +9,142 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/logo.png" alt="NITW Logo">
-                <span>NIT Warangal</span>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="C:\Users\SandeepK\OneDrive\Desktop\nitw_conf\assets\logo.png" alt="NITW Logo">
+            <span>NITW Conference</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about-nitw"><i class="fas fa-university"></i> About NIT Warangal & MED</a></li>
+            <li><a href="#about-conference"><i class="fas fa-info-circle"></i> About Conference</a></li>
+            <li><a href="#call-for-papers"><i class="fas fa-file-alt"></i> Call for Paper</a></li>
+            <li><a href="#publication"><i class="fas fa-book"></i> Publication Details</a></li>
+            <li><a href="#committee"><i class="fas fa-users"></i> Organizing Committee</a></li>
+            <li><a href="#dates"><i class="fas fa-calendar-alt"></i> Important Dates</a></li>
+            <li><a href="#registration"><i class="fas fa-user-plus"></i> Registration Details</a></li>
+            <li><a href="#tracks"><i class="fas fa-list"></i> Conference Tracks</a></li>
+            <li><a href="#awards"><i class="fas fa-trophy"></i> Awards</a></li>
+            <li><a href="#instructions"><i class="fas fa-file-signature"></i> Author Instructions</a></li>
+            <li><a href="#venue"><i class="fas fa-map-marker-alt"></i> Venue</a></li>
+            <li><a href="#sponsors"><i class="fas fa-handshake"></i> Sponsors</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="assets/brochure.pdf" target="_blank" class="download-link"><i class="fas fa-download"></i> Download Brochure</a></li>
+        </ul>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <main class="main-with-sidebar">
+        <section id="home" class="main-section">
+            <div class="main-image">
+                <img src="assets/main.jpeg" alt="NIT Warangal Campus">
             </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#committee">Committee</a></li>
-                <li><a href="#dates">Important Dates</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#instructions">Author Instructions</a></li>
-                <li><a href="#venue">Venue</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="C:\Users\SandeepK\OneDrive\Desktop\nitw_conf\assets\pdf_bro.pdf" download>Download Brochure</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="parallax-bg">    
-                <img src="assets/main.jpeg" alt="NITW Main" class="bg-img" />
-            </div>
-            <div class="hero-content">
-                <h1>International Conference on Thermal Sciences and Sustainable Energy</h1>
-                <h2>ICTSE-2026</h2>
-                <p class="date">January 23-24, 2026</p>
-                <p class="organizer">Organized by</p>
-                <p class="department">Department of Mechanical Engineering,</p>
-                <p class="institute">National Institute of Technology Warangal</p>
+            <div class="main-content">
+                <div class="logo-container">
+                    <img src="assets/main.jpeg" alt="NIT Warangal Logo" class="main-logo">
+                </div>
+                <h1 class="conference-title">International Conference on Thermal Sciences and Sustainable Energy</h1>
+                <h2 class="conference-subtitle">(ICTSE-2026)</h2>
+                <div class="conference-details">
+                    <p class="date">January 23-24, 2026</p>
+                    <p class="organizer">Organized by</p>
+                    <p class="department">Department of Mechanical Engineering,</p>
+                    <p class="institute">National Institute of Technology Warangal</p>
+                </div>
                 <div class="cta-buttons">
-                    <a href="#registration" class="btn primary">Register Now</a>
-                    <a href="#call-for-papers" class="btn secondary">Call for Papers</a>
+                    <a href="#call-for-papers" class="btn btn-primary">Submit Paper</a>
+                    <a href="assets/pdf_bro.pdf" download class="btn btn-secondary">Download Brochure</a>
                 </div>
             </div>
         </section>
 
         <section id="about-nitw" class="section full-width-section">
+            <div class="bg-image"></div>
             <h2>About NIT Warangal</h2>
             <div class="nitw-box">
-                <p>National Institute of Technology Warangal, established in 1959, is the first in the chain of 31
-NITs in the country. The institute is recognized as an Institute of National Importance and is
-ranked among the top technical education institutions in India. There are 14 Departments
-offering 10 undergraduate programmes (B.Tech) in engineering, 29 post graduate
-programmes and research programmes in engineering, sciences, humanities, physical
-education and management. NIT Warangal is a residential campus with about 7000
-students from across the country and about 500 international students.
-Department of Mechanical Engineering (MED) was established as one of the major
-departments of the Institute, since its inception in 1959. The department has been actively
-engaged in teaching and research in diverse fields of Mechanical Engineering. MED has 51
-faculties holding Ph.D from reputed Indian and foreign Universities. The department offers 1
-Under Graduate (B.Tech.) and 5 Post Graduate (M.Tech) courses. The MED has 400+
-SCI/Scopus Indexed journals in last 3 years</p>
+                <p>National Institute of Technology Warangal, established in 1959, is the first in the chain of 31 NITs in the country. The institute is recognized as an Institute of National Importance and is ranked among the top technical education institutions in India.</p>
+                <p>There are 14 Departments offering 10 undergraduate programmes (B.Tech) in engineering, 29 post graduate programmes and research programmes in engineering, sciences, humanities, physical education and management. NIT Warangal is a residential campus with about 7000 students from across the country and about 500 international students.</p>
+                <p>Department of Mechanical Engineering (MED) was established as one of the major departments of the Institute, since its inception in 1959. The department has been actively engaged in teaching and research in diverse fields of Mechanical Engineering. MED has 51 faculties holding Ph.D from reputed Indian and foreign Universities. The department offers 1 Under Graduate (B.Tech.) and 5 Post Graduate (M.Tech) courses. The MED has 400+ SCI/Scopus Indexed journals in last 3 years.</p>
+            </div>
+            <div class="nitw-stats">
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>7000+</h3>
+                    <p>Students</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>500+</h3>
+                    <p>International Students</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>51</h3>
+                    <p>PhD Faculty Members</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <h3>400+</h3>
+                    <p>Research Publications</p>
+                </div>
             </div>
         </section>
 
         <section id="about-conference" class="section full-width-section">
+            <div class="bg-image"></div>
             <h2>About Conference</h2>
             <div class="nitw-box">
                 <p>The Mechanical Engineering Department Conference 2025 at NIT Warangal is a premier international conference that brings together researchers, academicians, and industry professionals from around the world. This conference serves as a platform for sharing cutting-edge research, innovative ideas, and technological advancements in the field of mechanical engineering.</p>
                 <p>The conference will feature keynote speeches from eminent researchers, technical sessions, workshops, and poster presentations. Participants will have the opportunity to network with peers, collaborate on research projects, and explore potential industry-academia partnerships.</p>
                 <p>With a focus on sustainable engineering solutions and emerging technologies, the conference aims to address current challenges in mechanical engineering and pave the way for future innovations. The event will also provide a platform for young researchers and students to showcase their work and receive valuable feedback from experts in the field.</p>
             </div>
+            <div class="conference-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Research Focus</h3>
+                    <p>Cutting-edge research presentations and discussions on latest developments in mechanical engineering</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Networking</h3>
+                    <p>Connect with industry experts, researchers, and academicians from around the globe</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Showcase of innovative solutions and emerging technologies in the field</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Learning</h3>
+                    <p>Workshops and technical sessions for knowledge sharing and skill development</p>
+                </div>
+            </div>
         </section>
 
         <section id="call-for-papers" class="section full-width-section">
+            <div class="bg-image"></div>
             <h2>Call for Papers</h2>
+            <div class="nitw-box">
+                <p>The Mechanical Engineering Department Conference 2025 invites researchers, academicians, and industry professionals to submit their original research papers. We welcome submissions across various domains of mechanical engineering, including but not limited to:</p>
+                <div class="presentation-info">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Faculties, scientists, researchers and technical experts are invited to submit their original work in the fields of heat transfer, fluid systems and energy systems. All the papers must be presented in person. An option for online presentation is available only for foreign delegates.</p>
+                </div>
+                <p>All the papers accepted after peer review from registered participants will most probably be published in the conference proceedings or Lecture Notes with ISBN number. Selected papers presented will be published in Energy (Elsevier) and other SCI/Scopus journals (names will be updated after proper permission) as special issues after peer review process.</p>
+                <div class="paper-submission">
+                    <a href="#instructions" class="btn primary"><i class="fas fa-upload"></i> Submit Paper</a>
+                    <a href="assets/pdf_bro.pdf" class="btn secondary" download><i class="fas fa-download"></i> Download Template</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="call-for-papers" class="section full-width-section">
+            <div class="bg-image"></div>
+            <h2>Publication Details</h2>
             <div class="nitw-box">
                 <p>The Mechanical Engineering Department Conference 2025 invites researchers, academicians, and industry professionals to submit their original research papers. We welcome submissions across various domains of mechanical engineering, including but not limited to:</p>
                 <div class="presentation-info">
@@ -92,176 +153,161 @@ SCI/Scopus Indexed journals in last 3 years</p>
                 </div>
                 <p>All accepted papers will be published in the conference proceedings and will be considered for publication in reputed journals. Selected papers will be recommended for publication in Scopus-indexed journals.</p>
                 <div class="paper-submission">
-                    <a href="#instructions" class="btn primary">Submit Paper</a>
-                    <a href="assets/pdf_bro.pdf" class="btn secondary" download>Download Template</a>
+                    <a href="#instructions" class="btn primary"><i class="fas fa-upload"></i> Submit Paper</a>
+                    <a href="assets/pdf_bro.pdf" class="btn secondary" download><i class="fas fa-download"></i> Download Template</a>
                 </div>
             </div>
         </section>
 
-        <section id="committee" class="section">
-            <div class="container">
-                <h2>Organizing Committee</h2>
-                <div class="committee-grid">
-                    <div class="committee-member">
-                        <h3>Patron</h3>
-                        <p>Prof. Bidyadhar Subudhi</p>
-                        <p>Director, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Chairman</h3>
-                        <p>Prof. Y Ravi Kumar</p>
-                        <p>HoD, MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Organizing Secretaries</h3>
-                        <p>Dr. Satyanand Abraham</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Organizing Secretaries</h3>
-                        <p>Dr. Anant Kumar Rai</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Organizing Secretaries</h3>
-                        <p>Prof. D Jaya Krishna</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-
-                    <div class="committee-member">
-                        <h3>Conveners</h3>
-                        <p>Prof. Ravi Kumar Puli</p>
-                        <p>Prof. G. Amba Prasad Rao</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Conveners</h3>
-                        <p>Prof. G. Amba Prasad Rao</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-
-                    <div class="committee-member">
-                        <h3>Publication Incharge</h3>
-                        <p>Prof. V P Chandra Mohan</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Publication Incharge</h3>
-                        <p>Prof. Karthik B</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Prof. S Srinivasa Rao</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Dr. P Ravi Kumar</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Prof. A Veeresh Babu</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Dr. C Hari Krishna</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Dr. C Sampath Kumar</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Prof. V R K Raju</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Prof. K Kiran Kumar</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-                    <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Dr. Prasanth Anand K L,</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>                   
-                     <div class="committee-member">
-                        <h3>Committee Members</h3>
-                        <p>Prof. G N Srinivasulu</p>
-                        <p>MED, NIT Warangal</p>
-                    </div>
-
+        <section id="committee" class="section full-width-section">
+            <div class="bg-image"></div>
+            <h2>Organizing Committee</h2>
+            <div class="committee-grid">
+                <div class="committee-member">
+                    <h3>Patron</h3>
+                    <p>Prof. Bidyadhar Subudhi</p>
+                    <p>Director, NIT Warangal</p>
                 </div>
-                <div class="pagination-controls">
-                    <button id="prevPage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="pageInfo">Page 1 of 8</span>
-                    <button id="nextPage" class="pagination-arrow" aria-label="Next page">→</button>
+                <div class="committee-member">
+                    <h3>Chairman</h3>
+                    <p>Prof. Y Ravi Kumar</p>
+                    <p>HoD, MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Organizing Secretaries</h3>
+                    <p>Dr. Satyanand Abraham</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Organizing Secretaries</h3>
+                    <p>Dr. Anant Kumar Rai</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Organizing Secretaries</h3>
+                    <p>Prof. D Jaya Krishna</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Conveners</h3>
+                    <p>Prof. Ravi Kumar Puli</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Conveners</h3>
+                    <p>Prof. G. Amba Prasad Rao</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+
+                <div class="committee-member">
+                    <h3>Publication Incharge</h3>
+                    <p>Prof. V P Chandra Mohan</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Publication Incharge</h3>
+                    <p>Prof. Karthik B</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Prof. S Srinivasa Rao</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Dr. P Ravi Kumar</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Prof. A Veeresh Babu</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Dr. C Hari Krishna</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Dr. C Sampath Kumar</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Prof. V R K Raju</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Prof. K Kiran Kumar</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Dr. Prasanth Anand K L</p>
+                    <p>MED, NIT Warangal</p>
+                </div>
+                <div class="committee-member">
+                    <h3>Committee Members</h3>
+                    <p>Prof. G N Srinivasulu</p>
+                    <p>MED, NIT Warangal</p>
                 </div>
             </div>
         </section>
 
-        <section id="dates" class="section">
-            <div class="container">
-                <h2>Important Dates</h2>
-                <div class="dates-grid">
-                    <div class="date-item">
-                        <h3>Full Length Paper Submission</h3>
-                        <p>September 15, 2025</p>
-                        <p>Complete paper submission</p>
-                        <p>IEEE format required</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Notification of Final Acceptance</h3>
-                        <p>November 15, 2025</p>
-                        <p>Review process complete</p>
-                        <p>Authors will be notified</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Early Bird Registration</h3>
-                        <p>November 30, 2025</p>
-                        <p>Discounted registration</p>
-                        <p>Limited time offer</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Regular Registration</h3>
-                        <p>December 31, 2025</p>
-                        <p>Standard registration</p>
-                        <p>Until conference start</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Conference Dates</h3>
-                        <p>January 15-17, 2025</p>
-                        <p>Main conference</p>
-                        <p>Technical sessions</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Workshop Submission</h3>
-                        <p>December 1, 2024</p>
-                        <p>Workshop proposals</p>
-                        <p>Detailed guidelines</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Poster Submission</h3>
-                        <p>December 10, 2024</p>
-                        <p>Poster abstracts</p>
-                        <p>Format specifications</p>
-                    </div>
-                    <div class="date-item">
-                        <h3>Camera-ready Submission</h3>
-                        <p>December 15, 2024</p>
-                        <p>Final paper submission</p>
-                        <p>Including all revisions</p>
-                    </div>
+        <section id="dates" class="section full-width-section">
+            <div class="bg-image"></div>
+            <h2>Important Dates</h2>
+            <div class="dates-grid">
+                <div class="date-item">
+                    <h3>Full Length Paper Submission</h3>
+                    <p>September 15, 2025</p>
+                    <p>Complete paper submission</p>
+                    <p>IEEE format required</p>
                 </div>
-                <div class="pagination-controls">
-                    <button id="prevDatePage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="datePageInfo">Page 1 of 2</span>
-                    <button id="nextDatePage" class="pagination-arrow" aria-label="Next page">→</button>
+                <div class="date-item">
+                    <h3>Notification of Final Acceptance</h3>
+                    <p>November 15, 2025</p>
+                    <p>Review process complete</p>
+                    <p>Authors will be notified</p>
+                </div>
+                <div class="date-item">
+                    <h3>Early Bird Registration</h3>
+                    <p>November 30, 2025</p>
+                    <p>Discounted registration</p>
+                    <p>Limited time offer</p>
+                </div>
+                <div class="date-item">
+                    <h3>Regular Registration</h3>
+                    <p>December 31, 2025</p>
+                    <p>Standard registration</p>
+                    <p>Until conference start</p>
+                </div>
+                <div class="date-item">
+                    <h3>Conference Dates</h3>
+                    <p>January 15-17, 2025</p>
+                    <p>Main conference</p>
+                    <p>Technical sessions</p>
+                </div>
+                <div class="date-item">
+                    <h3>Workshop Submission</h3>
+                    <p>December 1, 2024</p>
+                    <p>Workshop proposals</p>
+                    <p>Detailed guidelines</p>
+                </div>
+                <div class="date-item">
+                    <h3>Poster Submission</h3>
+                    <p>December 10, 2024</p>
+                    <p>Poster abstracts</p>
+                    <p>Format specifications</p>
+                </div>
+                <div class="date-item">
+                    <h3>Camera-ready Submission</h3>
+                    <p>December 15, 2024</p>
+                    <p>Final paper submission</p>
+                    <p>Including all revisions</p>
                 </div>
             </div>
         </section>
@@ -305,241 +351,275 @@ SCI/Scopus Indexed journals in last 3 years</p>
             </div>
         </section>
 
-        <section id="tracks" class="section">
-            <div class="container">
-                <h2>Conference Tracks</h2>
-                <div class="tracks-grid">
-                    <div class="track-item">
-                        <i class="fas fa-solar-panel"></i>
-                        <h3>Energy Systems I</h3>
-                        <p>Solar Energy Equipment and Processes</p>
-                        <p>Fuel Cells</p>
-                        <p>Nuclear Energy</p>
-                        <p>Energy Storage Systems</p>
-                        <p>Wind turbines</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Energy Systems II</h3>
-                        <p>Hydrogen Production and Storage</p>
-                        <p>Hydrogen Transport and Utilisation</p>
-                        <p>Biofuels and Biomass</p>
-                        <p>Waste to energy</p>
-                        <p>Sustainable Energy Solutions</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-water"></i>
-                        <h3>Fluid Systems I</h3>
-                        <p>Turbulent Flows</p>
-                        <p>Hydro machinery</p>
-                        <p>Multiphase Flows</p>
-                        <p>Microfluidics</p>
-                        <p>Biofluidics</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-water"></i>
-                        <h3>Fluid Systems II</h3>
-                        <p>Fluid structure interaction</p>
-                        <p>Aerodynamics</p>
-                        <p>Compressible fluid flow</p>
-                        <p>Flow visualization</p>
-                        <p>Flow through porous media</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Thermal Systems I</h3>
-                        <p>IC Engines and Gas Turbine Combustion</p>
-                        <p>Advances in Heat Exchangers</p>
-                        <p>Electronics Cooling</p>
-                        <p>Micro and Nanoscale Heat Transfer</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Thermal Systems II</h3>
-                        <p>Thermal Management of EV Components</p>
-                        <p>Heat Transfer in Multiphase Flows</p>
-                        <p>Heat Transfer Enhancement Techniques</p>
-                        <p>Heat Transfer Devices</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Thermal Systems III</h3>
-                        <p>Gas Turbine Cooling</p>
-                        <p>Innovations in Refrigeration</p>
-                        <p>Air Conditioning Systems</p>
-                        <p>Thermal Energy Storage</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Thermal Systems IV</h3>
-                        <p>Heat Transfer in Renewable Energy</p>
-                        <p>Thermal Management in Electronics</p>
-                        <p>Advanced Cooling Technologies</p>
-                        <p>Thermal System Optimization</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-brain"></i>
-                        <h3>Interdisciplinary Studies I</h3>
-                        <p>AI/ML for thermo-hydraulic systems</p>
-                        <p>Measurement techniques for thermal and fluid systems</p>
-                        <p>Advanced Computational Methods</p>
-                        <p>Data Analytics in Thermal Systems</p>
-                    </div>
-                    <div class="track-item">
-                        <i class="fas fa-microchip"></i>
-                        <h3>Interdisciplinary Studies II</h3>
-                        <p>Sensor development</p>
-                        <p>Heat and fluid flow in advanced manufacturing techniques</p>
-                        <p>Smart Monitoring Systems</p>
-                        <p>IoT Applications in Thermal Systems</p>
-                    </div>
+        <section id="tracks" class="section full-width-section">
+            <div class="bg-image"></div>
+            <h2>Conference Tracks</h2>
+            <div class="tracks-grid">
+                <div class="track-item">
+                    <i class="fas fa-solar-panel"></i>
+                    <h3>Energy Systems I</h3>
+                    <ul>
+                        <li>Solar Energy Equipment and Processes</li>
+                        <li>Fuel Cells</li>
+                        <li>Nuclear Energy</li>
+                        <li>Energy Storage Systems</li>
+                        <li>Wind turbines</li>
+                    </ul>
                 </div>
-                <div class="pagination-controls">
-                    <button id="prevTrackPage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="trackPageInfo">Page 1 of 5</span>
-                    <button id="nextTrackPage" class="pagination-arrow" aria-label="Next page">→</button>
+                <div class="track-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Energy Systems II</h3>
+                    <ul>
+                        <li>Hydrogen Production and Storage</li>
+                        <li>Hydrogen Transport and Utilisation</li>
+                        <li>Biofuels and Biomass</li>
+                        <li>Waste to energy</li>
+                        <li>Sustainable Energy Solutions</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-water"></i>
+                    <h3>Fluid Systems I</h3>
+                    <ul>
+                        <li>Turbulent Flows</li>
+                        <li>Hydro machinery</li>
+                        <li>Multiphase Flows</li>
+                        <li>Microfluidics</li>
+                        <li>Biofluidics</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-water"></i>
+                    <h3>Fluid Systems II</h3>
+                    <ul>
+                        <li>Fluid structure interaction</li>
+                        <li>Aerodynamics</li>
+                        <li>Compressible fluid flow</li>
+                        <li>Flow visualization</li>
+                        <li>Flow through porous media</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Thermal Systems I</h3>
+                    <ul>
+                        <li>IC Engines and Gas Turbine Combustion</li>
+                        <li>Advances in Heat Exchangers</li>
+                        <li>Electronics Cooling</li>
+                        <li>Micro and Nanoscale Heat Transfer</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Thermal Systems II</h3>
+                    <ul>
+                        <li>Thermal Management of EV Components</li>
+                        <li>Heat Transfer in Multiphase Flows</li>
+                        <li>Heat Transfer Enhancement Techniques</li>
+                        <li>Heat Transfer Devices</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Thermal Systems III</h3>
+                    <ul>
+                        <li>Gas Turbine Cooling</li>
+                        <li>Innovations in Refrigeration</li>
+                        <li>Air Conditioning Systems</li>
+                        <li>Thermal Energy Storage</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Thermal Systems IV</h3>
+                    <ul>
+                        <li>Heat Transfer in Renewable Energy</li>
+                        <li>Thermal Management in Electronics</li>
+                        <li>Advanced Cooling Technologies</li>
+                        <li>Thermal System Optimization</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Interdisciplinary Studies I</h3>
+                    <ul>
+                        <li>AI/ML for thermo-hydraulic systems</li>
+                        <li>Measurement techniques for thermal and fluid systems</li>
+                        <li>Advanced Computational Methods</li>
+                        <li>Data Analytics in Thermal Systems</li>
+                    </ul>
+                </div>
+                <div class="track-item">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Interdisciplinary Studies II</h3>
+                    <ul>
+                        <li>Sensor development</li>
+                        <li>Heat and fluid flow in advanced manufacturing techniques</li>
+                        <li>Smart Monitoring Systems</li>
+                        <li>IoT Applications in Thermal Systems</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="awards" class="section">
-            <div class="container">
-                <h2>Awards</h2>
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <i class="fas fa-trophy"></i>
-                        <h3>Best Paper Award</h3>
-                        <p>Recognition and cash prize</p>
-                        <p>Outstanding research contribution</p>
-                        <p>₹50,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-medal"></i>
-                        <h3>Best Student Paper</h3>
-                        <p>Special recognition</p>
-                        <p>For student researchers</p>
-                        <p>₹25,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-award"></i>
-                        <h3>Best Presentation</h3>
-                        <p>Oral presentation excellence</p>
-                        <p>Communication skills</p>
-                        <p>₹15,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-star"></i>
-                        <h3>Young Researcher</h3>
-                        <p>Early career researchers</p>
-                        <p>Under 35 years of age</p>
-                        <p>₹20,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Innovation Award</h3>
-                        <p>Novel technical solutions</p>
-                        <p>Practical applications</p>
-                        <p>₹30,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Best PhD Work</h3>
-                        <p>Doctoral research excellence</p>
-                        <p>Comprehensive contribution</p>
-                        <p>₹35,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-users"></i>
-                        <h3>Industry Impact</h3>
-                        <p>Industry collaboration</p>
-                        <p>Commercial potential</p>
-                        <p>₹40,000 prize money</p>
-                    </div>
-                    <div class="award-item">
-                        <i class="fas fa-globe"></i>
-                        <h3>Sustainable Solution</h3>
-                        <p>Environmental impact</p>
-                        <p>Green technology focus</p>
-                        <p>₹25,000 prize money</p>
-                    </div>
+            <div class="bg-image"></div>
+            <h2>Awards</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Best Paper Award</h3>
+                    <ul>
+                        <li>Recognition and cash prize</li>
+                        <li>Outstanding research contribution</li>
+                        <li>₹50,000 prize money</li>
+                    </ul>
                 </div>
-                <div class="pagination-controls">
-                    <button id="prevAwardPage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="awardPageInfo">Page 1 of 2</span>
-                    <button id="nextAwardPage" class="pagination-arrow" aria-label="Next page">→</button>
+                <div class="award-item">
+                    <i class="fas fa-medal"></i>
+                    <h3>Best Student Paper</h3>
+                    <ul>
+                        <li>Special recognition</li>
+                        <li>For student researchers</li>
+                        <li>₹25,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-award"></i>
+                    <h3>Best Presentation</h3>
+                    <ul>
+                        <li>Oral presentation excellence</li>
+                        <li>Communication skills</li>
+                        <li>₹15,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Young Researcher</h3>
+                    <ul>
+                        <li>Early career researchers</li>
+                        <li>Under 35 years of age</li>
+                        <li>₹20,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation Award</h3>
+                    <ul>
+                        <li>Novel technical solutions</li>
+                        <li>Practical applications</li>
+                        <li>₹30,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Best PhD Work</h3>
+                    <ul>
+                        <li>Doctoral research excellence</li>
+                        <li>Comprehensive contribution</li>
+                        <li>₹35,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Industry Impact</h3>
+                    <ul>
+                        <li>Industry collaboration</li>
+                        <li>Commercial potential</li>
+                        <li>₹40,000 prize money</li>
+                    </ul>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Sustainable Solution</h3>
+                    <ul>
+                        <li>Environmental impact</li>
+                        <li>Green technology focus</li>
+                        <li>₹25,000 prize money</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="instructions" class="section">
-            <div class="container">
-                <h2>Author Instructions</h2>
-                <div class="instructions-grid">
-                    <div class="instruction-item">
-                        <i class="fas fa-file-alt"></i>
-                        <h3>Paper Format</h3>
-                        <p>IEEE format required</p>
-                        <p>Maximum 6 pages</p>
-                        <p>PDF format only</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-language"></i>
-                        <h3>Language</h3>
-                        <p>English only</p>
-                        <p>Clear and concise</p>
-                        <p>Professional writing</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Figures & Tables</h3>
-                        <p>High resolution</p>
-                        <p>Clear captions</p>
-                        <p>Proper numbering</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-book"></i>
-                        <h3>References</h3>
-                        <p>IEEE citation style</p>
-                        <p>Recent publications</p>
-                        <p>Proper formatting</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-upload"></i>
-                        <h3>Submission</h3>
-                        <p>Online submission</p>
-                        <p>Complete information</p>
-                        <p>Author details</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Review Process</h3>
-                        <p>Double-blind review</p>
-                        <p>Technical evaluation</p>
-                        <p>Quality assessment</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-camera"></i>
-                        <h3>Camera Ready</h3>
-                        <p>Final formatting</p>
-                        <p>Copyright form</p>
-                        <p>Registration proof</p>
-                    </div>
-                    <div class="instruction-item">
-                        <i class="fas fa-presentation"></i>
-                        <h3>Presentation</h3>
-                        <p>15 minutes talk</p>
-                        <p>5 minutes Q&A</p>
-                        <p>PPT guidelines</p>
-                    </div>
+            <div class="bg-image"></div>
+            <h2>Author Instructions</h2>
+            <div class="instructions-grid">
+                <div class="instruction-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Paper Format</h3>
+                    <ul>
+                        <li>IEEE format required</li>
+                        <li>Maximum 6 pages</li>
+                        <li>PDF format only</li>
+                    </ul>
                 </div>
-                <div class="pagination-controls">
-                    <button id="prevInstructionPage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="instructionPageInfo">Page 1 of 2</span>
-                    <button id="nextInstructionPage" class="pagination-arrow" aria-label="Next page">→</button>
+                <div class="instruction-item">
+                    <i class="fas fa-language"></i>
+                    <h3>Language</h3>
+                    <ul>
+                        <li>English only</li>
+                        <li>Clear and concise</li>
+                        <li>Professional writing</li>
+                    </ul>
                 </div>
-                <div class="template-download">
-                    <a href="assets/pdf_bro.pdf" class="btn" target="_blank">Download Template</a>
+                <div class="instruction-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Figures & Tables</h3>
+                    <ul>
+                        <li>High resolution</li>
+                        <li>Clear captions</li>
+                        <li>Proper numbering</li>
+                    </ul>
                 </div>
+                <div class="instruction-item">
+                    <i class="fas fa-book"></i>
+                    <h3>References</h3>
+                    <ul>
+                        <li>IEEE citation style</li>
+                        <li>Recent publications</li>
+                        <li>Proper formatting</li>
+                    </ul>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-upload"></i>
+                    <h3>Submission</h3>
+                    <ul>
+                        <li>Online submission</li>
+                        <li>Complete information</li>
+                        <li>Author details</li>
+                    </ul>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Review Process</h3>
+                    <ul>
+                        <li>Double-blind review</li>
+                        <li>Technical evaluation</li>
+                        <li>Quality assessment</li>
+                    </ul>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>Camera Ready</h3>
+                    <ul>
+                        <li>Final formatting</li>
+                        <li>Copyright form</li>
+                        <li>Registration proof</li>
+                    </ul>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-presentation"></i>
+                    <h3>Presentation</h3>
+                    <ul>
+                        <li>15 minutes talk</li>
+                        <li>5 minutes Q&A</li>
+                        <li>PPT guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="template-download">
+                <a href="assets/pdf_bro.pdf" class="btn" target="_blank">Download Template</a>
             </div>
         </section>
 
@@ -550,64 +630,75 @@ SCI/Scopus Indexed journals in last 3 years</p>
                     <div class="venue-item">
                         <i class="fas fa-university"></i>
                         <h3>Conference Venue</h3>
-                        <p>NIT Warangal Campus</p>
-                        <p>Main Auditorium</p>
-                        <p>Warangal, Telangana</p>
+                        <ul>
+                            <li>NIT Warangal Campus</li>
+                            <li>Main Auditorium</li>
+                            <li>Warangal, Telangana</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-plane"></i>
                         <h3>Air Travel</h3>
-                        <p>Rajiv Gandhi International Airport</p>
-                        <p>Hyderabad (HYD)</p>
-                        <p>150 km from venue</p>
+                        <ul>
+                            <li>Rajiv Gandhi International Airport</li>
+                            <li>Hyderabad (HYD)</li>
+                            <li>150 km from venue</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-train"></i>
                         <h3>Rail Travel</h3>
-                        <p>Warangal Railway Station</p>
-                        <p>Direct trains from major cities</p>
-                        <p>5 km from venue</p>
+                        <ul>
+                            <li>Warangal Railway Station</li>
+                            <li>Direct trains from major cities</li>
+                            <li>5 km from venue</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-bus"></i>
                         <h3>Road Travel</h3>
-                        <p>Well-connected by highways</p>
-                        <p>Regular bus services</p>
-                        <p>Auto and taxi available</p>
+                        <ul>
+                            <li>Well-connected by highways</li>
+                            <li>Regular bus services</li>
+                            <li>Auto and taxi available</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-hotel"></i>
                         <h3>Accommodation</h3>
-                        <p>On-campus guest house</p>
-                        <p>Nearby hotels (2-5 km)</p>
-                        <p>Special conference rates</p>
+                        <ul>
+                            <li>On-campus guest house</li>
+                            <li>Nearby hotels (2-5 km)</li>
+                            <li>Special conference rates</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <h3>Local Transport</h3>
-                        <p>Auto-rickshaws</p>
-                        <p>City buses</p>
-                        <p>App-based cabs</p>
+                        <ul>
+                            <li>Auto-rickshaws</li>
+                            <li>City buses</li>
+                            <li>App-based cabs</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-utensils"></i>
                         <h3>Food & Dining</h3>
-                        <p>On-campus cafeteria</p>
-                        <p>Local restaurants</p>
-                        <p>Special dietary options</p>
+                        <ul>
+                            <li>On-campus cafeteria</li>
+                            <li>Local restaurants</li>
+                            <li>Special dietary options</li>
+                        </ul>
                     </div>
                     <div class="venue-item">
                         <i class="fas fa-info-circle"></i>
                         <h3>Local Information</h3>
-                        <p>Tourist attractions</p>
-                        <p>Emergency contacts</p>
-                        <p>Weather updates</p>
+                        <ul>
+                            <li>Tourist attractions</li>
+                            <li>Emergency contacts</li>
+                            <li>Weather updates</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="pagination-controls">
-                    <button id="prevVenuePage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="venuePageInfo">Page 1 of 2</span>
-                    <button id="nextVenuePage" class="pagination-arrow" aria-label="Next page">→</button>
                 </div>
             </div>
         </section>
@@ -619,143 +710,156 @@ SCI/Scopus Indexed journals in last 3 years</p>
                     <div class="sponsor-item">
                         <i class="fas fa-crown"></i>
                         <h3>Platinum Sponsor</h3>
-                        <p>Industry Leader</p>
-                        <p>Major Support</p>
-                        <p>Strategic Partner</p>
+                        <ul>
+                            <li>Industry Leader</li>
+                            <li>Major Support</li>
+                            <li>Strategic Partner</li>
+                        </ul>
                     </div>
                     <div class="sponsor-item">
                         <i class="fas fa-gem"></i>
                         <h3>Gold Sponsor</h3>
-                        <p>Premium Support</p>
-                        <p>Key Partner</p>
-                        <p>Industry Expert</p>
+                        <ul>
+                            <li>Premium Support</li>
+                            <li>Key Partner</li>
+                            <li>Industry Expert</li>
+                        </ul>
                     </div>
                     <div class="sponsor-item">
                         <i class="fas fa-medal"></i>
                         <h3>Silver Sponsor</h3>
-                        <p>Technical Support</p>
-                        <p>Research Partner</p>
-                        <p>Innovation Leader</p>
+                        <ul>
+                            <li>Technical Support</li>
+                            <li>Research Partner</li>
+                            <li>Innovation Leader</li>
+                        </ul>
                     </div>
                     <div class="sponsor-item">
                         <i class="fas fa-award"></i>
                         <h3>Bronze Sponsor</h3>
-                        <p>Event Support</p>
-                        <p>Local Partner</p>
-                        <p>Community Leader</p>
+                        <ul>
+                            <li>Event Support</li>
+                            <li>Local Partner</li>
+                            <li>Community Leader</li>
+                        </ul>
                     </div>
                     <div class="sponsor-item">
                         <i class="fas fa-star"></i>
                         <h3>Technology Partner</h3>
-                        <p>Technical Solutions</p>
-                        <p>Digital Support</p>
-                        <p>Innovation Hub</p>
+                        <ul>
+                            <li>Technical Solutions</li>
+                            <li>Digital Support</li>
+                            <li>Innovation Hub</li>
+                        </ul>
                     </div>
                     <div class="sponsor-item">
                         <i class="fas fa-handshake"></i>
                         <h3>Industry Partner</h3>
-                        <p>Manufacturing Support</p>
-                        <p>Research Collaboration</p>
-                        <p>Expert Network</p>
+                        <ul>
+                            <li>Manufacturing Support</li>
+                            <li>Research Collaboration</li>
+                            <li>Expert Network</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="pagination-controls">
-                    <button id="prevSponsorPage" class="pagination-arrow" aria-label="Previous page">←</button>
-                    <span id="sponsorPageInfo">Page 1 of 3</span>
-                    <button id="nextSponsorPage" class="pagination-arrow" aria-label="Next page">→</button>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Conference Chair</h3>
-                        <p>Prof. Satyanand Abraham</p>
-                        <p>Email: conference@nitw.ac.in</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>+91 870 245 9191</p>
-                        <p>+91 870 245 9192</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Address</h3>
-                        <p>Department of Mechanical Engineering</p>
-                        <p>National Institute of Technology Warangal</p>
-                        <p>Warangal - 506004, Telangana, India</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-clock"></i>
-                        <h3>Working Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                        <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    </div>
+            <div class="bg-image"></div>
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Conference Chair</h3>
+                    <p>Prof. Satyanand Abraham</p>
+                    <p>Email: conference@nitw.ac.in</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91 870 245 9191</p>
+                    <p>+91 870 245 9192</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>Department of Mechanical Engineering</p>
+                    <p>National Institute of Technology Warangal</p>
+                    <p>Warangal - 506004, Telangana, India</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <h2 class="footer-heading">Get in Touch</h2>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <i class="fas fa-link"></i>
-                    <h3>Quick Links</h3>
-                    <p><a href="https://www.nitw.ac.in" target="_blank">Official Website</a></p>
-                    <p><a href="https://www.nitw.ac.in/main/academics/departments/mechanical/" target="_blank">Mechanical Department</a></p>
-                    <p><a href="https://www.nitw.ac.in/main/academics/" target="_blank">Academics</a></p>
-                    <p><a href="https://www.nitw.ac.in/main/research/" target="_blank">Research</a></p>
-                </div>
-                <div class="footer-section">
-                    <i class="fas fa-share-alt"></i>
-                    <h3>Connect With Us</h3>
-                    <p>LinkedIn</p>
-                    <p>Twitter</p>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
-                </div>
-                <div class="footer-section">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Contact</h3>
-                    <p>+91 870 245 9191</p>
-                    <p>info@nitw.ac.in</p>
-                    <p>NH 563, Kazipet</p>
-                    <p>Warangal, Telangana</p>
-                </div>
-                <div class="footer-section">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Conference Info</h3>
-                    <p>January 15-17, 2025</p>
-                    <p>9:00 AM - 5:00 PM</p>
-                    <p>500+ Participants</p>
-                    <p>International Event</p>
-                </div>
+    <footer class="section">
+        <div class="bg-image"></div>
+        <h2>Get in Touch</h2>
+        <div class="footer-content">
+            <div class="footer-section">
+                <i class="fas fa-link"></i>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://www.nitw.ac.in" target="_blank">Official Website</a></li>
+                    <li><a href="https://www.nitw.ac.in/main/academics/departments/mechanical/" target="_blank">Mechanical Department</a></li>
+                    <li><a href="https://www.nitw.ac.in/main/academics/" target="_blank">Academics</a></li>
+                    <li><a href="https://www.nitw.ac.in/main/research/" target="_blank">Research</a></li>
+                </ul>
             </div>
-            <div class="map-section">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Find Us</h3>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.7891999999997!2d79.5435!3d17.9872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f9c3c1c0c0f%3A0x3c3c3c3c3c3c3c3c!2sNational%20Institute%20of%20Technology%20Warangal!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="250" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
+            <div class="footer-section">
+                <i class="fas fa-share-alt"></i>
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 NIT Warangal. All rights reserved.</p>
-                <p>Designed and Developed by Department of Mechanical Engineering</p>
+            <div class="footer-section">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Contact</h3>
+                <ul>
+                    <li>+91 870 245 9191</li>
+                    <li>info@nitw.ac.in</li>
+                    <li>NH 563, Kazipet</li>
+                    <li>Warangal, Telangana</li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Conference Info</h3>
+                <ul>
+                    <li>January 15-17, 2025</li>
+                    <li>9:00 AM - 5:00 PM</li>
+                    <li>500+ Participants</li>
+                    <li>International Event</li>
+                </ul>
+            </div>
+        </div>
+        <div class="map-section">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Find Us</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.7891999999997!2d79.5435!3d17.9872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f9c3c1c0c0f%3A0x3c3c3c3c3c3c3c3c!2sNational%20Institute%20of%20Technology%20Warangal!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="250" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NIT Warangal. All rights reserved.</p>
+            <p>Designed and Developed by Department of Mechanical Engineering</p>
         </div>
     </footer>
 
