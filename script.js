@@ -101,205 +101,194 @@ document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Committee pagination
-    const membersPerPage = 4;
-    const committeeMembers = document.querySelectorAll('.committee-member');
-    const totalPages = Math.ceil(committeeMembers.length / membersPerPage);
-    let currentPage = 1;
-
-    const prevButton = document.getElementById('prevPage');
-    const nextButton = document.getElementById('nextPage');
-    const pageInfo = document.getElementById('pageInfo');
-
-    // Dates pagination
-    const datesPerPage = 4;
-    const dateItems = document.querySelectorAll('.date-item');
-    const totalDatePages = Math.ceil(dateItems.length / datesPerPage);
-    let currentDatePage = 1;
-
-    const prevDateButton = document.getElementById('prevDatePage');
-    const nextDateButton = document.getElementById('nextDatePage');
-    const datePageInfo = document.getElementById('datePageInfo');
-
-    // Awards pagination
-    const awardsPerPage = 4;
-    const awardItems = document.querySelectorAll('.award-item');
-    const totalAwardPages = Math.ceil(awardItems.length / awardsPerPage);
-    let currentAwardPage = 1;
-
-    const prevAwardButton = document.getElementById('prevAwardPage');
-    const nextAwardButton = document.getElementById('nextAwardPage');
-    const awardPageInfo = document.getElementById('awardPageInfo');
-
-    // Instructions pagination
-    const instructionsPerPage = 4;
-    const instructionItems = document.querySelectorAll('.instruction-item');
-    const totalInstructionPages = Math.ceil(instructionItems.length / instructionsPerPage);
-    let currentInstructionPage = 1;
-
-    const prevInstructionButton = document.getElementById('prevInstructionPage');
-    const nextInstructionButton = document.getElementById('nextInstructionPage');
-    const instructionPageInfo = document.getElementById('instructionPageInfo');
-
-    // Venue pagination
-    const venuePerPage = 4;
-    const venueItems = document.querySelectorAll('.venue-item');
-    const totalVenuePages = Math.ceil(venueItems.length / venuePerPage);
-    let currentVenuePage = 1;
-
-    const prevVenueButton = document.getElementById('prevVenuePage');
-    const nextVenueButton = document.getElementById('nextVenuePage');
-    const venuePageInfo = document.getElementById('venuePageInfo');
-
-    // Sponsors pagination
-    const sponsorsPerPage = 2;
-    const sponsorItems = document.querySelectorAll('.sponsor-item');
-    const totalSponsorPages = Math.ceil(sponsorItems.length / sponsorsPerPage);
-    let currentSponsorPage = 1;
-
-    const prevSponsorButton = document.getElementById('prevSponsorPage');
-    const nextSponsorButton = document.getElementById('nextSponsorPage');
-    const sponsorPageInfo = document.getElementById('sponsorPageInfo');
-
-    function updatePageInfo() {
-        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+// Function to get items per page based on screen width
+function getItemsPerPage() {
+    if (window.innerWidth <= 768) {
+        return 2; // 2 items per page on mobile
+    } else {
+        return 4; // 4 items per page on larger screens
     }
+}
 
-    function updateDatePageInfo() {
-        datePageInfo.textContent = `Page ${currentDatePage} of ${totalDatePages}`;
+// Update pagination for committee section
+function updateCommitteePage() {
+    const items = document.querySelectorAll('.committee-member');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const startIndex = (currentCommitteePage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    items.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    document.getElementById('pageInfo').textContent = `Page ${currentCommitteePage} of ${totalPages}`;
+    document.getElementById('prevPage').disabled = currentCommitteePage === 1;
+    document.getElementById('nextPage').disabled = currentCommitteePage === totalPages;
+}
+
+// Update pagination for dates section
+function updateDatesPage() {
+    const items = document.querySelectorAll('.date-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const startIndex = (currentDatePage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    items.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    document.getElementById('datePageInfo').textContent = `Page ${currentDatePage} of ${totalPages}`;
+    document.getElementById('prevDatePage').disabled = currentDatePage === 1;
+    document.getElementById('nextDatePage').disabled = currentDatePage === totalPages;
+}
+
+// Update pagination for awards section
+function updateAwardsPage() {
+    const items = document.querySelectorAll('.award-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const startIndex = (currentAwardPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    items.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    document.getElementById('awardPageInfo').textContent = `Page ${currentAwardPage} of ${totalPages}`;
+    document.getElementById('prevAwardPage').disabled = currentAwardPage === 1;
+    document.getElementById('nextAwardPage').disabled = currentAwardPage === totalPages;
+}
+
+// Update pagination for tracks section
+function updateTracksPage() {
+    const items = document.querySelectorAll('.track-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const startIndex = (currentTrackPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    items.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    document.getElementById('trackPageInfo').textContent = `Page ${currentTrackPage} of ${totalPages}`;
+    document.getElementById('prevTrackPage').disabled = currentTrackPage === 1;
+    document.getElementById('nextTrackPage').disabled = currentTrackPage === totalPages;
+}
+
+// Add window resize event listener
+window.addEventListener('resize', () => {
+    // Reset to first page when screen size changes
+    currentCommitteePage = 1;
+    currentDatePage = 1;
+    currentAwardPage = 1;
+    currentTrackPage = 1;
+    
+    // Update all paginations
+    updateCommitteePage();
+    updateDatesPage();
+    updateAwardsPage();
+    updateTracksPage();
+});
+
+// Initialize pagination
+let currentCommitteePage = 1;
+let currentDatePage = 1;
+let currentAwardPage = 1;
+let currentTrackPage = 1;
+
+// Committee pagination
+document.getElementById('prevPage').addEventListener('click', () => {
+    if (currentCommitteePage > 1) {
+        currentCommitteePage--;
+        updateCommitteePage();
     }
+});
 
-    function showPage(page, items, perPage, prevBtn, nextBtn, pageInfo, currentPageVar, totalPagesVar) {
-        const start = (page - 1) * perPage;
-        const end = start + perPage;
-        
-        // Add slide-out animation to current cards
-        items.forEach((item, index) => {
-            if (index >= start && index < end) {
-                if (page > currentPageVar) {
-                    item.classList.add('slide-right');
-                } else {
-                    item.classList.add('slide-left');
-                }
-            }
-        });
-
-        // After animation, update visibility and remove slide classes
-        setTimeout(() => {
-            items.forEach((item, index) => {
-                if (index >= start && index < end) {
-                    item.style.display = 'block';
-                    item.classList.remove('slide-left', 'slide-right');
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }, 500);
-
-        // Update button states
-        prevBtn.disabled = page === 1;
-        nextBtn.disabled = page === totalPagesVar;
-        
-        // Update page info
-        pageInfo.textContent = `Page ${page} of ${totalPagesVar}`;
+document.getElementById('nextPage').addEventListener('click', () => {
+    const items = document.querySelectorAll('.committee-member');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentCommitteePage < totalPages) {
+        currentCommitteePage++;
+        updateCommitteePage();
     }
+});
 
-    // Committee pagination event listeners
-    prevButton.addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage, committeeMembers, membersPerPage, prevButton, nextButton, pageInfo, currentPage, totalPages);
-        }
-    });
+// Dates pagination
+document.getElementById('prevDatePage').addEventListener('click', () => {
+    if (currentDatePage > 1) {
+        currentDatePage--;
+        updateDatesPage();
+    }
+});
 
-    nextButton.addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage, committeeMembers, membersPerPage, prevButton, nextButton, pageInfo, currentPage, totalPages);
-        }
-    });
+document.getElementById('nextDatePage').addEventListener('click', () => {
+    const items = document.querySelectorAll('.date-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentDatePage < totalPages) {
+        currentDatePage++;
+        updateDatesPage();
+    }
+});
 
-    // Dates pagination event listeners
-    prevDateButton.addEventListener('click', () => {
-        if (currentDatePage > 1) {
-            currentDatePage--;
-            showPage(currentDatePage, dateItems, datesPerPage, prevDateButton, nextDateButton, datePageInfo, currentDatePage, totalDatePages);
-        }
-    });
+// Awards pagination
+document.getElementById('prevAwardPage').addEventListener('click', () => {
+    if (currentAwardPage > 1) {
+        currentAwardPage--;
+        updateAwardsPage();
+    }
+});
 
-    nextDateButton.addEventListener('click', () => {
-        if (currentDatePage < totalDatePages) {
-            currentDatePage++;
-            showPage(currentDatePage, dateItems, datesPerPage, prevDateButton, nextDateButton, datePageInfo, currentDatePage, totalDatePages);
-        }
-    });
+document.getElementById('nextAwardPage').addEventListener('click', () => {
+    const items = document.querySelectorAll('.award-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentAwardPage < totalPages) {
+        currentAwardPage++;
+        updateAwardsPage();
+    }
+});
 
-    // Awards pagination event listeners
-    prevAwardButton.addEventListener('click', () => {
-        if (currentAwardPage > 1) {
-            currentAwardPage--;
-            showPage(currentAwardPage, awardItems, awardsPerPage, prevAwardButton, nextAwardButton, awardPageInfo, currentAwardPage, totalAwardPages);
-        }
-    });
+// Tracks pagination
+document.getElementById('prevTrackPage').addEventListener('click', () => {
+    if (currentTrackPage > 1) {
+        currentTrackPage--;
+        updateTracksPage();
+    }
+});
 
-    nextAwardButton.addEventListener('click', () => {
-        if (currentAwardPage < totalAwardPages) {
-            currentAwardPage++;
-            showPage(currentAwardPage, awardItems, awardsPerPage, prevAwardButton, nextAwardButton, awardPageInfo, currentAwardPage, totalAwardPages);
-        }
-    });
+document.getElementById('nextTrackPage').addEventListener('click', () => {
+    const items = document.querySelectorAll('.track-item');
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentTrackPage < totalPages) {
+        currentTrackPage++;
+        updateTracksPage();
+    }
+});
 
-    // Instructions pagination event listeners
-    prevInstructionButton.addEventListener('click', () => {
-        if (currentInstructionPage > 1) {
-            currentInstructionPage--;
-            showPage(currentInstructionPage, instructionItems, instructionsPerPage, prevInstructionButton, nextInstructionButton, instructionPageInfo, currentInstructionPage, totalInstructionPages);
-        }
-    });
-
-    nextInstructionButton.addEventListener('click', () => {
-        if (currentInstructionPage < totalInstructionPages) {
-            currentInstructionPage++;
-            showPage(currentInstructionPage, instructionItems, instructionsPerPage, prevInstructionButton, nextInstructionButton, instructionPageInfo, currentInstructionPage, totalInstructionPages);
-        }
-    });
-
-    // Venue pagination event listeners
-    prevVenueButton.addEventListener('click', () => {
-        if (currentVenuePage > 1) {
-            currentVenuePage--;
-            showPage(currentVenuePage, venueItems, venuePerPage, prevVenueButton, nextVenueButton, venuePageInfo, currentVenuePage, totalVenuePages);
-        }
-    });
-
-    nextVenueButton.addEventListener('click', () => {
-        if (currentVenuePage < totalVenuePages) {
-            currentVenuePage++;
-            showPage(currentVenuePage, venueItems, venuePerPage, prevVenueButton, nextVenueButton, venuePageInfo, currentVenuePage, totalVenuePages);
-        }
-    });
-
-    // Sponsors pagination event listeners
-    prevSponsorButton.addEventListener('click', () => {
-        if (currentSponsorPage > 1) {
-            currentSponsorPage--;
-            showPage(currentSponsorPage, sponsorItems, sponsorsPerPage, prevSponsorButton, nextSponsorButton, sponsorPageInfo, currentSponsorPage, totalSponsorPages);
-        }
-    });
-
-    nextSponsorButton.addEventListener('click', () => {
-        if (currentSponsorPage < totalSponsorPages) {
-            currentSponsorPage++;
-            showPage(currentSponsorPage, sponsorItems, sponsorsPerPage, prevSponsorButton, nextSponsorButton, sponsorPageInfo, currentSponsorPage, totalSponsorPages);
-        }
-    });
-
-    // Initialize first pages
-    showPage(1, committeeMembers, membersPerPage, prevButton, nextButton, pageInfo, currentPage, totalPages);
-    showPage(1, dateItems, datesPerPage, prevDateButton, nextDateButton, datePageInfo, currentDatePage, totalDatePages);
-    showPage(1, awardItems, awardsPerPage, prevAwardButton, nextAwardButton, awardPageInfo, currentAwardPage, totalAwardPages);
-    showPage(1, instructionItems, instructionsPerPage, prevInstructionButton, nextInstructionButton, instructionPageInfo, currentInstructionPage, totalInstructionPages);
-    showPage(1, venueItems, venuePerPage, prevVenueButton, nextVenueButton, venuePageInfo, currentVenuePage, totalVenuePages);
-    showPage(1, sponsorItems, sponsorsPerPage, prevSponsorButton, nextSponsorButton, sponsorPageInfo, currentSponsorPage, totalSponsorPages);
-}); 
+// Initialize all paginations
+updateCommitteePage();
+updateDatesPage();
+updateAwardsPage();
+updateTracksPage(); 
